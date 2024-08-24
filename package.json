@@ -7,5 +7,8 @@
   "dependencies": {
     "express": "^4.19.2",
     "nodemon": "^3.1.4"
+  },
+  "scripts": {
+    "start": "curl https://huggingface.co/TheBloke/Llama-2-7B-Chat-GGUF/resolve/main/llama-2-7b-chat.Q4_K_M.gguf -L --output ./model/llama-2-7b-chat.Q4_K_M.gguf && node app.js"
   }
 }

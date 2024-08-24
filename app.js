@@ -3,11 +3,15 @@ const express = require("express");
 const app = express();
 const port = 3000;
 
-app.get("/", async (req, res) => {
+app.use(express.json());
+app.post("/", async (req, res) => {
+  const { question } = req.body;
   const result = await new Promise((resolve, reject) => {
     const runPy = spawn("python3", [
       "-c",
-      'from test import call_chat_completion; x = call_chat_completion("user", "what is the capital of france?"); print(x)',
+      `from test import call_chat_completion; x = call_chat_completion("user", "${
+        question ?? "what is the capital of france?"
+      }"); print(x)`,
     ]);
     runPy.stdout.on("data", (data) => {
       const r = data.toString();
