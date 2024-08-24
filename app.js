@@ -17,9 +17,9 @@ app.post("/", async (req, res) => {
       const r = data.toString();
       resolve(JSON.parse(r));
     });
-    // runPy.stderr.on("data", (data) => {
-    //   reject(`stderr: ${data}`);
-    // });
+    runPy.stderr.on("data", (data) => {
+      console.log(`info: ${data}`);
+    });
 
     runPy.on("close", (code) => {
       reject(`child process exited with code ${code}`);

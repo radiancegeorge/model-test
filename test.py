@@ -19,7 +19,7 @@ def call_chat_completion (role="user", question=""):
                 }
             ],
             # max_tokens=5
-            stop=["."],
+            # stop=["."],
             
             
     )
