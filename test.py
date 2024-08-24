@@ -7,7 +7,7 @@ def call_chat_completion (role="user", question=""):
         n_gpu_layers=-1, # Uncomment to use GPU acceleration
         # seed=1337, # Uncomment to set a specific seed
         # n_batch=32,
-        n_ctx=1000, # Uncomment to increase the context window
+        n_ctx=2048, # Uncomment to increase the context window
         split_mode=2
 )
 
