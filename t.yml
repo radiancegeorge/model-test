@@ -1,0 +1,92 @@
+# model:30aeb1d25121cf2060a3070ae734704d3f7e1545
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: learngualmodel
+spec:
+  selector:
+    matchLabels:
+      web: app-backend-model
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        web: app-backend-model
+    spec:
+      containers:
+        - name: modelcontainer
+          image: learngualtech/model:22ecb9eb6699955aa4a6a361e284ea13bee5a5b0
+          envFrom:
+            - secretRef:
+                name: model-env
+          # resources:
+          #   limits:
+          #     memory: "90Gi"
+          #     cpu: "45"
+          ports:
+            - containerPort: 8000
+      imagePullSecrets:
+        - name: regcred
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-backend-model
+spec:
+  selector:
+    web: app-backend-model
+  ports:
+    - port: 8000
+      targetPort: 8000
+
+---
+apiVersion: cert-manager.io/v1
+kind: ClusterIssuer
+metadata:
+  name: cert-issuer
+  namespace: cert-manager
+spec:
+  acme:
+    server: https://acme-v02.api.letsencrypt.org/directory
+    email: learngualdevteam@gmail.com
+    privateKeySecretRef:
+      name: issuer-encryption-secret
+    solvers:
+      - http01:
+          ingress:
+            class: nginx
+
+---
+kind: Ingress
+apiVersion: networking.k8s.io/v1
+metadata:
+  name: learngual-model
+  # namespace: production
+  # labels:
+  #   name: learngual-svc-ingress
+  annotations:
+    cert-manager.io/cluster-issuer: cert-issuer
+    kubernetes.io/ingress.class: nginx
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/proxy-body-size: "50m"
+    nginx.ingress.kubernetes.io/proxy-connect-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "600"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "600"
+spec:
+  tls:
+    - hosts:
+        - model.learngual.com
+      secretName: learngual-model
+  rules:
+    - host: model.learngual.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: app-backend-model
+                port:
+                  number: 8000

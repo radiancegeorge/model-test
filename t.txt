@@ -1,0 +1,278 @@
+Name:               pool-hhe3k8r1x-bsxb5
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/instance-type=c-48
+                    beta.kubernetes.io/os=linux
+                    doks.digitalocean.com/managed=true
+                    doks.digitalocean.com/node-id=d85903a3-8483-4e7c-879e-ad1fe4841089
+                    doks.digitalocean.com/node-pool=pool-hhe3k8r1x
+                    doks.digitalocean.com/node-pool-id=3af379dc-4f8d-4d91-a998-cfc0cffe1fda
+                    doks.digitalocean.com/version=1.28.11-do.0
+                    failure-domain.beta.kubernetes.io/region=nyc1
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=pool-hhe3k8r1x-bsxb5
+                    kubernetes.io/os=linux
+                    node.kubernetes.io/instance-type=c-48
+                    region=nyc1
+                    topology.kubernetes.io/region=nyc1
+Annotations:        alpha.kubernetes.io/provided-node-ip: 10.116.0.8
+                    csi.volume.kubernetes.io/nodeid: {"dobs.csi.digitalocean.com":"440545479"}
+                    network.cilium.io/ipv4-cilium-host: 10.244.1.241
+                    network.cilium.io/ipv4-health-ip: 10.244.1.213
+                    network.cilium.io/ipv4-pod-cidr: 10.244.1.128/25
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Thu, 22 Aug 2024 12:03:38 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  pool-hhe3k8r1x-bsxb5
+  AcquireTime:     <unset>
+  RenewTime:       Thu, 22 Aug 2024 13:31:53 +0100
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Thu, 22 Aug 2024 12:03:56 +0100   Thu, 22 Aug 2024 12:03:56 +0100   CiliumIsUp                   Cilium is running on this node
+  MemoryPressure       False   Thu, 22 Aug 2024 13:30:09 +0100   Thu, 22 Aug 2024 12:03:38 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Thu, 22 Aug 2024 13:30:09 +0100   Thu, 22 Aug 2024 12:03:38 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Thu, 22 Aug 2024 13:30:09 +0100   Thu, 22 Aug 2024 12:03:38 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Thu, 22 Aug 2024 13:30:09 +0100   Thu, 22 Aug 2024 12:03:51 +0100   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  10.116.0.8
+  Hostname:    pool-hhe3k8r1x-bsxb5
+  ExternalIP:  134.209.213.8
+Capacity:
+  cpu:                48
+  ephemeral-storage:  619097644Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             98865064Ki
+  pods:               110
+Allocatable:
+  cpu:                47900m
+  ephemeral-storage:  570560387766
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             91174Mi
+  pods:               110
+System Info:
+  Machine ID:                 25598fc2f184429b921fb52b3dc51c09
+  System UUID:                25598fc2-f184-429b-921f-b52b3dc51c09
+  Boot ID:                    8c705cb9-1701-45d5-ac08-4bb84597e3bb
+  Kernel Version:             6.1.0-22-amd64
+  OS Image:                   Debian GNU/Linux 12 (bookworm)
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  containerd://1.6.28
+  Kubelet Version:            v1.28.11
+  Kube-Proxy Version:         v1.28.11
+ProviderID:                   digitalocean://440545479
+Non-terminated Pods:          (10 in total)
+  Namespace                   Name                                         CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                         ------------  ----------  ---------------  -------------  ---
+  default                     learngualmodel-d567c9944-8x8kx               0 (0%)        0 (0%)      0 (0%)           0 (0%)         8m37s
+  ingress-nginx               ingress-nginx-controller-5cdf6df45b-b9k2j    100m (0%)     0 (0%)      90Mi (0%)        0 (0%)         85m
+  kube-system                 cilium-bjz98                                 300m (0%)     0 (0%)      300Mi (0%)       0 (0%)         88m
+  kube-system                 coredns-575d7877bb-97rr6                     100m (0%)     0 (0%)      150M (0%)        150M (0%)      85m
+  kube-system                 cpc-bridge-proxy-l6lls                       100m (0%)     0 (0%)      75Mi (0%)        0 (0%)         88m
+  kube-system                 csi-do-node-qbr5f                            0 (0%)        0 (0%)      0 (0%)           0 (0%)         88m
+  kube-system                 do-node-agent-5vz85                          102m (0%)     0 (0%)      80Mi (0%)        300Mi (0%)     88m
+  kube-system                 hubble-ui-776986f894-p8khr                   0 (0%)        0 (0%)      0 (0%)           0 (0%)         87m
+  kube-system                 konnectivity-agent-fmhb8                     0 (0%)        0 (0%)      0 (0%)           0 (0%)         88m
+  kube-system                 kube-proxy-6sw6m                             0 (0%)        0 (0%)      125Mi (0%)       0 (0%)         88m
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests        Limits
+  --------           --------        ------
+  cpu                702m (1%)       0 (0%)
+  memory             852545920 (0%)  464572800 (0%)
+  ephemeral-storage  0 (0%)          0 (0%)
+  hugepages-1Gi      0 (0%)          0 (0%)
+  hugepages-2Mi      0 (0%)          0 (0%)
+Events:              <none>
+Name:               pool-hhe3k8r1x-bsxbs
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/instance-type=c-48
+                    beta.kubernetes.io/os=linux
+                    doks.digitalocean.com/managed=true
+                    doks.digitalocean.com/node-id=18787544-df6f-49b5-bc6c-f53fca6c1dfe
+                    doks.digitalocean.com/node-pool=pool-hhe3k8r1x
+                    doks.digitalocean.com/node-pool-id=3af379dc-4f8d-4d91-a998-cfc0cffe1fda
+                    doks.digitalocean.com/version=1.28.11-do.0
+                    failure-domain.beta.kubernetes.io/region=nyc1
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=pool-hhe3k8r1x-bsxbs
+                    kubernetes.io/os=linux
+                    node.kubernetes.io/instance-type=c-48
+                    region=nyc1
+                    topology.kubernetes.io/region=nyc1
+Annotations:        alpha.kubernetes.io/provided-node-ip: 10.116.0.9
+                    csi.volume.kubernetes.io/nodeid: {"dobs.csi.digitalocean.com":"440545480"}
+                    network.cilium.io/ipv4-cilium-host: 10.244.1.10
+                    network.cilium.io/ipv4-health-ip: 10.244.1.8
+                    network.cilium.io/ipv4-pod-cidr: 10.244.1.0/25
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Thu, 22 Aug 2024 12:03:38 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  pool-hhe3k8r1x-bsxbs
+  AcquireTime:     <unset>
+  RenewTime:       Thu, 22 Aug 2024 13:32:58 +0100
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Thu, 22 Aug 2024 12:03:56 +0100   Thu, 22 Aug 2024 12:03:56 +0100   CiliumIsUp                   Cilium is running on this node
+  MemoryPressure       False   Thu, 22 Aug 2024 13:31:26 +0100   Thu, 22 Aug 2024 12:03:38 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Thu, 22 Aug 2024 13:31:26 +0100   Thu, 22 Aug 2024 12:03:38 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Thu, 22 Aug 2024 13:31:26 +0100   Thu, 22 Aug 2024 12:03:38 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Thu, 22 Aug 2024 13:31:26 +0100   Thu, 22 Aug 2024 12:03:51 +0100   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  10.116.0.9
+  Hostname:    pool-hhe3k8r1x-bsxbs
+  ExternalIP:  157.230.85.133
+Capacity:
+  cpu:                48
+  ephemeral-storage:  619097644Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             98865064Ki
+  pods:               110
+Allocatable:
+  cpu:                47900m
+  ephemeral-storage:  570560387766
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             91174Mi
+  pods:               110
+System Info:
+  Machine ID:                 ba2b65592e6b492f8101a99cda75caa4
+  System UUID:                ba2b6559-2e6b-492f-8101-a99cda75caa4
+  Boot ID:                    c414f15f-7fa2-4c99-8936-8d0f1f1ce2d9
+  Kernel Version:             6.1.0-22-amd64
+  OS Image:                   Debian GNU/Linux 12 (bookworm)
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  containerd://1.6.28
+  Kubelet Version:            v1.28.11
+  Kube-Proxy Version:         v1.28.11
+ProviderID:                   digitalocean://440545480
+Non-terminated Pods:          (12 in total)
+  Namespace                   Name                                         CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                         ------------  ----------  ---------------  -------------  ---
+  cert-manager                cert-manager-54f4667c59-g775j                0 (0%)        0 (0%)      0 (0%)           0 (0%)         88m
+  cert-manager                cert-manager-cainjector-f856fb49-gx8x4       0 (0%)        0 (0%)      0 (0%)           0 (0%)         88m
+  cert-manager                cert-manager-webhook-746f45774-gp58z         0 (0%)        0 (0%)      0 (0%)           0 (0%)         88m
+  ingress-nginx               ingress-nginx-controller-5cdf6df45b-ltjlp    100m (0%)     0 (0%)      90Mi (0%)        0 (0%)         88m
+  kube-system                 cilium-xxqx9                                 300m (0%)     0 (0%)      300Mi (0%)       0 (0%)         89m
+  kube-system                 coredns-575d7877bb-gxk5k                     100m (0%)     0 (0%)      150M (0%)        150M (0%)      88m
+  kube-system                 cpc-bridge-proxy-d674f                       100m (0%)     0 (0%)      75Mi (0%)        0 (0%)         89m
+  kube-system                 csi-do-node-kdpbj                            0 (0%)        0 (0%)      0 (0%)           0 (0%)         89m
+  kube-system                 do-node-agent-qf68w                          102m (0%)     0 (0%)      80Mi (0%)        300Mi (0%)     89m
+  kube-system                 hubble-relay-5866569c68-lp7dj                0 (0%)        0 (0%)      0 (0%)           0 (0%)         88m
+  kube-system                 konnectivity-agent-5zvsd                     0 (0%)        0 (0%)      0 (0%)           0 (0%)         89m
+  kube-system                 kube-proxy-vbzk4                             0 (0%)        0 (0%)      125Mi (0%)       0 (0%)         89m
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests        Limits
+  --------           --------        ------
+  cpu                702m (1%)       0 (0%)
+  memory             852545920 (0%)  464572800 (0%)
+  ephemeral-storage  0 (0%)          0 (0%)
+  hugepages-1Gi      0 (0%)          0 (0%)
+  hugepages-2Mi      0 (0%)          0 (0%)
+Events:              <none>
+Name:               pool-hhe3k8r1x-bsxb5
+Roles:              <none>
+Labels:             beta.kubernetes.io/arch=amd64
+                    beta.kubernetes.io/instance-type=c-48
+                    beta.kubernetes.io/os=linux
+                    doks.digitalocean.com/managed=true
+                    doks.digitalocean.com/node-id=d85903a3-8483-4e7c-879e-ad1fe4841089
+                    doks.digitalocean.com/node-pool=pool-hhe3k8r1x
+                    doks.digitalocean.com/node-pool-id=3af379dc-4f8d-4d91-a998-cfc0cffe1fda
+                    doks.digitalocean.com/version=1.28.11-do.0
+                    failure-domain.beta.kubernetes.io/region=nyc1
+                    kubernetes.io/arch=amd64
+                    kubernetes.io/hostname=pool-hhe3k8r1x-bsxb5
+                    kubernetes.io/os=linux
+                    node.kubernetes.io/instance-type=c-48
+                    region=nyc1
+                    topology.kubernetes.io/region=nyc1
+Annotations:        alpha.kubernetes.io/provided-node-ip: 10.116.0.8
+                    csi.volume.kubernetes.io/nodeid: {"dobs.csi.digitalocean.com":"440545479"}
+                    network.cilium.io/ipv4-cilium-host: 10.244.1.241
+                    network.cilium.io/ipv4-health-ip: 10.244.1.213
+                    network.cilium.io/ipv4-pod-cidr: 10.244.1.128/25
+                    node.alpha.kubernetes.io/ttl: 0
+                    volumes.kubernetes.io/controller-managed-attach-detach: true
+CreationTimestamp:  Thu, 22 Aug 2024 12:03:38 +0100
+Taints:             <none>
+Unschedulable:      false
+Lease:
+  HolderIdentity:  pool-hhe3k8r1x-bsxb5
+  AcquireTime:     <unset>
+  RenewTime:       Thu, 22 Aug 2024 13:34:26 +0100
+Conditions:
+  Type                 Status  LastHeartbeatTime                 LastTransitionTime                Reason                       Message
+  ----                 ------  -----------------                 ------------------                ------                       -------
+  NetworkUnavailable   False   Thu, 22 Aug 2024 12:03:56 +0100   Thu, 22 Aug 2024 12:03:56 +0100   CiliumIsUp                   Cilium is running on this node
+  MemoryPressure       False   Thu, 22 Aug 2024 13:30:09 +0100   Thu, 22 Aug 2024 12:03:38 +0100   KubeletHasSufficientMemory   kubelet has sufficient memory available
+  DiskPressure         False   Thu, 22 Aug 2024 13:30:09 +0100   Thu, 22 Aug 2024 12:03:38 +0100   KubeletHasNoDiskPressure     kubelet has no disk pressure
+  PIDPressure          False   Thu, 22 Aug 2024 13:30:09 +0100   Thu, 22 Aug 2024 12:03:38 +0100   KubeletHasSufficientPID      kubelet has sufficient PID available
+  Ready                True    Thu, 22 Aug 2024 13:30:09 +0100   Thu, 22 Aug 2024 12:03:51 +0100   KubeletReady                 kubelet is posting ready status. AppArmor enabled
+Addresses:
+  InternalIP:  10.116.0.8
+  Hostname:    pool-hhe3k8r1x-bsxb5
+  ExternalIP:  134.209.213.8
+Capacity:
+  cpu:                48
+  ephemeral-storage:  619097644Ki
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             98865064Ki
+  pods:               110
+Allocatable:
+  cpu:                47900m
+  ephemeral-storage:  570560387766
+  hugepages-1Gi:      0
+  hugepages-2Mi:      0
+  memory:             91174Mi
+  pods:               110
+System Info:
+  Machine ID:                 25598fc2f184429b921fb52b3dc51c09
+  System UUID:                25598fc2-f184-429b-921f-b52b3dc51c09
+  Boot ID:                    8c705cb9-1701-45d5-ac08-4bb84597e3bb
+  Kernel Version:             6.1.0-22-amd64
+  OS Image:                   Debian GNU/Linux 12 (bookworm)
+  Operating System:           linux
+  Architecture:               amd64
+  Container Runtime Version:  containerd://1.6.28
+  Kubelet Version:            v1.28.11
+  Kube-Proxy Version:         v1.28.11
+ProviderID:                   digitalocean://440545479
+Non-terminated Pods:          (10 in total)
+  Namespace                   Name                                         CPU Requests  CPU Limits  Memory Requests  Memory Limits  Age
+  ---------                   ----                                         ------------  ----------  ---------------  -------------  ---
+  default                     learngualmodel-d567c9944-8x8kx               0 (0%)        0 (0%)      0 (0%)           0 (0%)         11m
+  ingress-nginx               ingress-nginx-controller-5cdf6df45b-b9k2j    100m (0%)     0 (0%)      90Mi (0%)        0 (0%)         87m
+  kube-system                 cilium-bjz98                                 300m (0%)     0 (0%)      300Mi (0%)       0 (0%)         90m
+  kube-system                 coredns-575d7877bb-97rr6                     100m (0%)     0 (0%)      150M (0%)        150M (0%)      87m
+  kube-system                 cpc-bridge-proxy-l6lls                       100m (0%)     0 (0%)      75Mi (0%)        0 (0%)         90m
+  kube-system                 csi-do-node-qbr5f                            0 (0%)        0 (0%)      0 (0%)           0 (0%)         90m
+  kube-system                 do-node-agent-5vz85                          102m (0%)     0 (0%)      80Mi (0%)        300Mi (0%)     90m
+  kube-system                 hubble-ui-776986f894-p8khr                   0 (0%)        0 (0%)      0 (0%)           0 (0%)         89m
+  kube-system                 konnectivity-agent-fmhb8                     0 (0%)        0 (0%)      0 (0%)           0 (0%)         90m
+  kube-system                 kube-proxy-6sw6m                             0 (0%)        0 (0%)      125Mi (0%)       0 (0%)         90m
+Allocated resources:
+  (Total limits may be over 100 percent, i.e., overcommitted.)
+  Resource           Requests        Limits
+  --------           --------        ------
+  cpu                702m (1%)       0 (0%)
+  memory             852545920 (0%)  464572800 (0%)
+  ephemeral-storage  0 (0%)          0 (0%)
+  hugepages-1Gi      0 (0%)          0 (0%)
+  hugepages-2Mi      0 (0%)          0 (0%)
+Events:              <none>
