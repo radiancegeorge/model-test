@@ -9,7 +9,7 @@ app.post("/", async (req, res) => {
   const result = await new Promise((resolve, reject) => {
     const runPy = spawn("python3", [
       "-c",
-      `from test import call_chat_completion; x = call_chat_completion(${topic}, "${essay}"); print(x)`,
+      `from test import call_chat_completion; x = call_chat_completion("${topic}", "${essay}"); print(x)`,
     ]);
     runPy.stdout.on("data", (data) => {
       const r = data.toString();
