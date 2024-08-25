@@ -6,7 +6,7 @@ def call_chat_completion (topic="The Impact of Social Media on Mental Health", e
         model_path="model/llama-2-7b-chat.Q4_K_M.gguf",
         n_gpu_layers=-1, # Uncomment to use GPU acceleration
         # seed=1337, # Uncomment to set a specific seed
-        n_batch=4,
+        n_batch=100,
         n_ctx=2048, # Uncomment to increase the context window
         split_mode=1,
         
